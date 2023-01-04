@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 javascript Interview Question</title>
+</head>
+<body>
+    <!-- <script>
+        //1
+        let a = [];
+        let b = [];
+        console.warn(a==b);
+        console.warn(a===b);
+    </script> -->
+    <!-- <script>
+        //2
+        let a = []; //Data//
+        let b = a; //Same Data for b And Same Output.//
+        console.warn(a==b);
+        console.warn(a===b);
+    </script> -->
+    <!-- <script>
+        //3
+        let a = [20]; //Data//
+        let b = [20]; //Same Datatype for b Or change B to String then False.//
+        console.warn(a[0]==b[0]);
+        console.warn(a[0]===b[0]);
+    </script> -->
+    <!-- <script>
+        //4
+        let z = [1,2,3,4]; //Array.//
+        let a = { name:"Anil"}; //Just for your Distraction was not consoled.// 
+        console.warn(...z);//Destructuring of Array will convert to string.//
+    </script> -->
+    <!-- <script>
+        //5
+        console.warn(typeof NaN)//type of "Not A Number".
+    </script> -->
+    <!-- <script>
+        //6
+        let Data = 10 - - 10; //Output is 20?Because  '- -' = '+' //
+        console.warn(Data);
+    </script> -->
+    <!-- <script>
+        //7
+        const set = new Set([1, 1, 3, 4]); //DataType is Set/Map/SetWeek/SetMap/etc.// 
+        console.log(set);//Automatically Delete Duplicate Value??//
+    </script> -->
+    <!-- <script>
+        //8
+        let Data = {name:"Anil"}; //Object //
+        console.warn(delete Data.name);//If Deleted will show True.//
+    </script> -->
+    <!-- <script>
+        //9
+        let Data = {name:"Anil"}; //Object //
+        console.warn(delete Data);//We Can't Directly Delete Data will show False.We Can Delete Property And Value.//
+    </script> -->
+    <!-- <script>
+        //10
+        const Data = ["Peter","Anil","Sam"]; //Array And Values //
+        // const [y] = Data; //Traversing 1st Value //
+        // console.log(y); //Why Peter Only //
+        const [y,z] = Data; 
+        console.log(y,z); //Why Peter & Anil = to get specific Value from array or object.Related To React State Use.//
+    </script> -->
+    <!-- <script>
+        //11
+        const Data = ["Peter","Anil","Sam"]; //How to get Second Element.//
+        // const [y] = Data; 
+        // console.log(y); //Won'tJust Anil
+        const [,z] = Data; //Suppose i want to get Just "Anil".???"Double , for third Element."//
+        console.log(z); //Why Peter & Anil = to get specific Value from array or object.Related To React State Use.//
+    </script> -->
+    <!-- <script>
+        //12
+        const Data = {name:"Anil", age:29, skill:"35"}; //Object = How to get Any Property WithOut . Operator //
+        // console.warn(Data.name) //Default Object function 
+        const {name}=Data; //Use {} in Variable.??//
+        console.warn(name) //
+    </script> -->
+    <!-- <script>
+        //13
+        const Data = {name:"Anil", age:29, skill:"35"}; //Object = How to Merge two Object Without loop//
+        const info = {city:"Noida", mail:"anil@test.com"}; //Object = How to  //
+        data = {...Data,...info} //Merge Objects Using {...,...}//
+        console.warn(data) //
+    </script> -->
+    <!-- <script>
+        //14
+        const Data = {name:"Anil", age:29, skill:"35"}; //Object //
+        const info = {city:"Noida"}; //Object //
+        data = {Data,...info} //Merge Objects Using {,...}//info Property will be outside of the Object//
+        console.warn(data) //
+    </script> -->
+    <!-- <script>
+        //15
+        const Data = {name:"Anil", age:29, skill:"35"}; //Object = Data.skill Also...??//
+        const info = {city:"Noida",skill:"Node"}; //Object = info.skill Also..??But Output will "Node"...//
+        data = {...Data,...info} //Merge Objects Using {,...}//info Property will be outside of the Object//
+        console.warn(data) //
+    </script> -->
+    <!-- <script>
+        //16
+        const name = "Anil";
+        console.log(name());
+    </script> -->
+    <!-- <script>
+        //17
+        const result = false || {} || null; //Will Show Object.Will Count Positive(True) Value..//
+        const res = false || 20 || null; //Will Show Number .//
+        console.log(result);
+        console.log(res);
+    </script> -->
+    <!-- <script>
+        //18
+        const result = null || false || ''; //We have empty/boolean/empty String..?//
+        console.warn(result);
+        const res = null || '' || false; //He Didn't got Positive Value Soo Last Value will getUp.//
+        console.warn(res);
+    </script> -->
+    <!-- <script>
+        //19
+        const result = [] || 0 || true; //We Have Array/number/boolean..//
+        console.warn(result); //got 1st positive Value.//
+    </script> -->
+    <!-- <script>
+        //20
+        console.warn(Promise.resolve(5)); //Promise Have Its Own Promise So Fulfilled.//
+    </script> -->
+
+    <!-- <script>
+        //21
+        console.log('❤️' === '❤️');
+    </script> -->
+    <!-- <script>
+        //22
+        JSON.parse();
+        // what this method will do
+        // A : Parses JSON to a javascript value 
+        // B : Parse a javascript object to JSON
+        // C : Parses any javascript value to JSON
+        // D : Parses JSON to a Javascript object only
+    </script> -->
+    <!-- <script>
+        //23
+        let name = 'sidhu';
+        function getName() {
+            console.log(name);
+            let name = 'anil'; //Let Scope is Block Level 
+        }
+        getName();
+    </script> -->
+    <!-- <script>
+        //24
+        let name = 'anil';
+        function getName()
+        {
+            console.log(name);
+        }
+        getName();
+    </script> -->
+    <!-- <script>
+        //25 //Templet Literal
+        console.log(`${(x => x)(`I love`)} to program`);
+    </script> -->
+    <!-- <script>
+        //26
+        function sumValues(x, y, z)
+        {
+            return x + y + z;
+        }
+        sumValues(1,2,3);
+        console.warn(sumValues(...[1,2,3]));
+        // A : sumValues([...1, 2, 3]);
+        // B : sumValues([...[1, 2, 3]]);
+        // C : sumValues(...[1, 2, 3]); //Correct Answer
+        // D : sumValues([1, 2, 3]);
+    </script> -->
+    <!-- <script>
+        //27
+        const name = 'code step by step';
+        console.log(!typeof name === 'object');
+        console.log(!typeof name === 'string');
+        console.log(!typeof name === false);
+    </script> -->
+    <!-- <script>
+        //28
+        const name = "Subscribe";
+        const age = 21;
+
+        console.log(isNaN(name));
+        console.log(isNaN(age));
+    </script> -->
+    <!-- <script>
+        //29
+        let person = {name:"Anil"};
+        //What can modify person object
+        // person.age=29
+        Object.seal(person); //But Afer Using Seal  U can modify Only Present Data Cannot Add New
+        person.age=29
+        person.name="sidhu";
+        console.warn(person);
+    </script> -->
+    <!-- <script>
+        //30
+        let data = [2, 9, 0, 10];
+        //Remove first element
+        data.shift(); //Used Default Method Of Array
+        console.warn(data);
+    </script> -->
+    <!-- <script>
+        //31
+        let data = [2, 9, 0, 10];
+        //Remove Last element
+        data.pop(); //Used Default Method Of Array
+        console.warn(data);
+    </script> -->
+    <!-- <script>
+        //32
+        //Check Any Number odd Or Even
+        console.warn(30);
+        let a = 30;
+        console.warn(a%2); //0 is even
+    </script> -->
+    <!-- <script>
+        //33
+        let data = {name:"anil"};
+        delete data.name
+        console.warn(data);
+    </script> -->
+    <!-- <script>
+        //34
+        let data = "true";
+        //convert data to boolean False Value.
+        console.log(typeof data);
+        console.log(typeof !data);//False
+    </script> -->
+    <!-- <script>
+        //35
+        let data = "true";
+        //convert data to boolean True Value.
+        console.log(typeof data);
+        console.log(data);//True
+    </script> -->
+    <!-- <script>
+        //36
+        //What is difference between Map & ForEach Function
+        //Map will return something Every time
+        //forEach will not return something Every time
+    </script> -->
+    <!-- <script>
+        //37
+        let data = ["anil","peter","bruce"];
+        delete data[1]; //Delete works with All DataTypes & Create empty space there.
+        console.warn(data);
+    </script> -->
+    <!-- <script>
+        //38
+        let data = ["anil","peter","bruce"];
+        delete data[1];
+        console.warn(data.length);
+    </script> -->
+    <!-- <script>
+        //39
+        //Merge Two Array
+        let A = [1, 2, 3];
+        let B = [4, 5, 6];
+        let C = [...A,...B];//Same for Object
+        console.warn(C);
+    </script> -->
+    <!-- <script>
+        //40
+        let c = 3 ** 3; //Square Of 3*3*3
+        console.log(c);
+    </script> -->
+
+    <!-- <script>
+        //41
+        let a = 2;
+        setTimeout(()=>
+        {
+            console.warn(a)
+        },0)
+        a=100;
+    </script> -->
+    <!-- <script>
+        //42
+        let a = 2;
+        let A = 30;
+        console.warn(A);
+        console.warn(a);
+    </script> -->
+    <!-- <script>
+        //43
+        let A10 = "like" //True
+        // let 10A = "Okay"; //False
+        console.warn(A10);
+    </script> -->
+    <!-- <script>
+        //44
+        let a = "like"; //String
+        let b = `like`; //Backticks
+        console.warn(a === b); //True 
+    </script> -->
+    <!-- <script>
+        //45
+        let a = 1;
+        let c = 2;
+        console.warn(--c === a);
+    </script> -->
+    <!-- <script>
+        //46
+        let a = 1;
+        let b = 1;
+        let c = 2;
+        console.warn(a === b === --c);
+    </script> -->
+    <!-- <script>
+        //47
+        console.warn(3*3);
+        console.warn(3**3);
+        // console.warn(3***3);
+    </script> -->
+    <!-- <script>
+        //48
+        console.warn(a);
+        var a;
+    </script> -->
+    <!-- <script>
+        //49
+        console.warn(b);
+    </script> -->
+    <!-- <script>
+        //50
+        console.warn([[[[]]]]);
+    </script> -->
+    <!-- <script>
+        //51
+        //how to find Os Name
+        //navigator.platform
+    </script> -->
+    <!-- <script>
+        //52
+        //for = 100;
+    </script> -->
+    <!-- <script>
+        //53
+        function fruit()
+        {
+            console.log(name);
+            console.log(price);
+
+            var name = "apple";
+            let price = 20;
+        }
+        fruit();
+    </script> -->
+    <!-- <script>
+        //54
+        for(var i=0;i < 3;i++)
+        {
+            setTimeout(() => console.log(i), 1);
+        }
+    </script> -->
+    <!-- <script>
+        //55
+        for(let i=0;i < 3;i++) //Let scope is block level
+        {
+            setTimeout(() => console.log(i), 1);
+        }
+    </script> -->
+    <!-- <script>
+        //56
+        console.warn(+true);
+        console.warn(typeof +true); //Whenever we add + sign string convert into number.
+    </script> -->
+    <!-- <script>
+        //57
+        console.warn(!"anil"); //because of ! it will opposite False.
+        console.warn(typeof("anil"));
+    </script> -->
+    <!-- <script>
+        //58
+        let data = "size";
+        const bird = {size:"small",};
+        console.warn(bird[data]);
+        console.warn(bird["size"]);
+        console.warn(bird.size);
+        console.warn(bird.data);
+    </script> -->
+    <!-- <script>
+        //59
+        let c = {name:"peter"};
+        let d;
+
+        d = c;
+        c.name = "anil";
+        console.log(d.name);
+    </script> -->
+    <!-- <script>
+        //60
+        var x;
+        var x =10;
+        console.log(x); //no limits to overRide.
+    </script> -->
+    
+    <!-- <script>
+        //61
+        var x;
+        let x = 10;
+        console.log(x); //Error.
+    </script> -->
+    <!-- <script>
+        //62
+        let a = 3;
+        let b = new Number(3);//Constructor.
+        console.log(a == b);//True.
+        console.log(a === b);//False.
+    </script> -->
+    <!-- <script>
+        //63
+        let name;
+        nmae = {}; //Type of
+        console.log(name);//undefined.
+    </script> -->
+    <!-- <script>
+        //64
+        function fruit()
+        {
+            console.log("Woof!");
+        }
+        fruit.name="apple";
+        fruit();
+    </script> -->
+    <!-- <script>
+        //65
+        function sum(a,b)
+        {
+            return a + b;
+        }
+        console.log(sum(1,"2"));//12 number and string convert a single string.
+    </script> -->
+    <!-- <script>
+        //66
+        let number = 0;
+        console.log(number++);//0 post increment = 1
+        console.log(++number);//1 = 1 p.i = 2.
+        console.log(number);//2.
+    </script> -->
+    <!-- <script>
+        //67
+        function getAge(...args)//spread operator
+        {
+            console.log(typeof args);
+        }
+        getAge(21);
+    </script> -->
+    <!-- <script>
+        //68
+        function getAge()
+        {
+            // `use strict`;
+            age = 21;
+            console.log(age);
+        }
+        getAge();
+    </script> -->
+    <!-- <script>
+        //69
+        const sum = eval(`10*10+5`);
+        console.log(sum);
+    </script> -->
+    <!-- <script>
+        //70
+        //**How long is cool secret accessible?
+        //sessionstorage.setItem(`cool_secret`,123);
+    </script> -->
+    <!-- <script>
+        //71
+        const obj = {1:"a",2:"b",3:"c"};
+        console.log(obj.hasOwnProperty("1"));
+        console.log(obj.hasOwnProperty(1));
+    </script> -->
+    <!-- <script>
+        //72
+        const obj = {a:"one",b:"two",a:"repeat"};
+        console.log(obj);//duplicate in object positon 1st ANd value last. 
+    </script> -->
+    <!-- <script>
+        //73
+        for(let i = 1;i<5;i++)
+        {
+            if(i === 3) continue;//3 will not add and then continue..
+            console.log(i);
+        }
+    </script> -->
+    <!-- <script>
+        //74
+        const foo = () => console.log('First');
+        const bar = () => setTimeout(() => console.log('Second'));
+        const baz = () => console.log('Third');
+        bar();//because setTimeOut got to stack and run last 
+        foo();//first
+        baz();//second
+    </script> -->
+    
+    <!-- 75 -->
+        <!-- <div>
+        <div onclick="console.log('first div')"> //3rd
+            <div onclick="console.log('second div')"> //2nd
+                <button onclick="console.log('button')"> //1st
+                    Click!
+                </button>
+            </div>
+        </div>
+        </div> -->
+    
+        <!-- <script>
+            //76
+            const person = {name:'anil'};
+            function sayHi(age)
+            {
+
+                return `${this.name} is ${age}`
+            }
+            console.log(sayHi.call(person,21));
+            console.log(sayHi.bind(person,21)());
+        </script> -->
+        <!-- <script>
+            //77
+            function sayHi()
+            {
+                return (() => 0)(); //Arrow function.
+            }
+            console.log(typeof sayHi()); //number.
+        </script> -->
+        <!-- <script>
+            //78
+            function sayHi()
+            {
+                return () => 0;
+            }
+            console.log(typeof sayHi());
+            console.log(typeof sayHi()());
+        </script> -->
+        <!-- <script>
+            //79
+            console.log(typeof typeof 1); //
+        </script> -->
+        <!-- <script>
+            //80
+            const number = [1, 2, 3];
+            number[6] = 11;//till 6 it will empty.6th pos will 11.
+            console.log(number);
+        </script> -->
+
+        <!-- <script>
+            //81
+            const number = [1, 2, 3];
+            number[9]=number;
+            console.log(number); //infinite.
+        </script> -->
+        <!-- <script>
+            //82
+            //Q) Everthing in javaScript is either a...
+            //A : primitive or object
+            //B : function or object
+            //C : trick question only objects
+            //D : number or object //Everything in javascript either a primary number or a object
+        </script> -->
+        <!-- <script>
+            //83
+            console.log(!!null);
+            console.log(!!"");
+            console.log(!!1);
+        </script> -->
+        <!-- <script>
+            //84
+            // console.warn(setInterval(() => console.log('Hi'), 1000)); //it will crash the browser 
+            // console.warn(setInterval(() => console.log('Hi'), 1000));
+            // console.warn(setInterval(() => console.log('Hi'), 1000));
+        </script> -->
+        <!-- <script>
+            //85
+            console.log([..."anil"]);//string will break in array.
+        </script> -->
+        <!-- <script>
+            //86
+            const firstPromise = new Promise((res, rej) => {
+                setTimeout(res, 500, 'one');
+            });
+            const SecondPromise = new Promise((res, rej) => {
+                setTimeout(res, 100, 'Two'); //because of 100ms soo this will run 1st.
+            });
+            Promise.race([firstPromise, SecondPromise]).then(res => console.log(res));
+        </script> -->
+        <!-- <script>
+            //87
+            let person = {name:'peter'};
+            const numbers = [person];
+            person = null;
+            console.log(numbers);//object generate to array.length : 1
+        </script> -->
+        <!-- <script>
+            //88
+            const person = {
+                name: "batman",
+                age : 21,
+            };
+            for (const item in person)
+            {
+                console.log(item);//keys will be shown.
+            }
+        </script> -->
+        <!-- <script>
+            //89
+            let data = 3 + 4 + '5';
+            console.log(typeof data);
+        </script> -->
+        <!-- <script>
+            //90
+            console.log(typeof 3 + 4 + '5'); //Soo typeof will 3=number then 4+5='45'/string.
+        </script> -->
+        <!-- <script>
+            //91
+            console.log(typeof (3 + 4 + +'5'));
+        </script> -->
+        <!-- <script>
+            //92
+            console.log([]==[]);//False.
+        </script> -->
+        <!-- <script>
+            //93
+            let data = [1, 2, 3].map(num => {
+                if(typeof num === 'number') return;
+                return num * 2;
+            })
+            console.log(data);
+        </script> -->
+        <!-- <script>
+            //94
+            function getInfo(member)
+            {
+                member.name = 'Anil';
+            }
+            const person = {name:'Sourabh'};
+            getInfo(person);
+            console.log(person);
+        </script> -->
+        <!-- <script>
+            //95
+            function Car()
+            {
+                this.make = 'tata';
+                return {make:'kia'};
+            }
+            const myCar = new Car();
+            console.log(myCar.make);
+        </script> -->
+        <!-- <script>
+            //96
+            (() => {
+                let x = (y = 10);//block level scrope soo undefined.
+            })();
+            console.log(typeof x);
+        </script> -->
+        <!-- <script>
+            //97
+            (() => {
+                let x = y = 10; //y is global scope = number.
+                //let x
+            })();
+            console.log(typeof y);
+        </script> -->
+        <!-- <script>
+            //98
+            (() => {
+                let x = 10;
+            })();
+            (() => {
+                let x = 10;
+            })();
+            console.log(typeof x); //block level scope at both.
+        </script> -->
+        <!-- <script>
+            //99
+            (() => {
+                let x = y = 10;
+            })();
+            (() => {
+                let x = y = 20;
+            })();
+            console.log(y); //20.
+        </script> -->
+        <!-- <script>
+            //100
+            let x = 10; //block scope.
+            (() => {
+                var x = 20; //global scope.
+            })();
+            console.log(x);
+        </script> -->
+        
+        <!-- <script>
+            //101
+            console.warn(!true - true); //1 not 0 // 0 - 1 =-1
+        </script> -->
+        <!-- <script>
+            //102
+            console.warn(true + + "10"); //1 + 10 = 11.
+        </script> -->
+</body>
+</html>
